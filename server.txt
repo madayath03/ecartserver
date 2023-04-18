@@ -1,0 +1,49 @@
+how to create server and deploy
+Make a folder fir it
+Do open in cmd
+npm init -y
+env variables - to store app secrets and configuration files
+gets loaded when u execute the app
+they act dynamic that based on var it can act as local or global
+there are diff types of it:
+system env var -  to set local operating system
+runtime var - runtime timil assign avunna var like deploying port number okke
+install packages below: express, .env, cors, mongoose
+npm i express dotenv cors mongoose
+create index.js - entry file
+create .env files to store environmental var in server folder
+create .git-ignore and enter node_modules in that
+import .env express cors in index.js
+create server app using express
+use cors and express.json() to ur server app
+create port to listen server app
+run server app in port
+
+how to connect to atlas
+open it, go to database, go to connect, get conn string
+creata avar database in .env file and paste it there
+add password and db name in the string
+create connection.js for connecting db to mongoose
+import mongoose and db
+define connect()
+now when we run we get that msg of db connected
+next define collection or schema here, and for that create model file
+inside schema created
+we cn also make a schema js file here without any models
+we ceated a model in productScehma.js based on what we have in collection
+then dnt forget to export it
+
+server paths are called routes where req come and resolve
+create routes folder to hold all the api request
+so we dnt create a index.js for giving all logic like in prev one 
+hee v hav router.js
+write all http req in there
+logic v r defining in seperate logic file called productController.js
+
+y we r creating these different files bcoz we are doing project in mvc model
+m for model to keep data, view to see the data and c for controller to deifne logic to get the data in view
+
+now in postman create a ecart and add new collection for get request
+name the collection
+provide the link for the request
+click on get u will get all the db items in it
